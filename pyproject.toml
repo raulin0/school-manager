@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "school-manager"
+version = "0.1.0"
+description = "A school manager system to manage courses, students and its registrations"
+license = "GPL-3.0-only"
+authors = ["Marcos Raulino <marcosfsraulino@gmail.com>"]
+readme = "README.md"
+packages = [{include = "school_manager"}]
+
+[tool.poetry.urls]
+"Repository" = "https://github.com/raulin0/school-manager"
+"Issue Tracker" = "https://github.com/raulin0/school-manager/issues"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.2.5"
+djangorestframework = "^3.14.0"
+requests = "^2.31.0"
+markdown = "^3.4.4"
+validate-docbr = "^1.10.0"
+django-filter = "^23.3"
+gunicorn = "^21.2.0"
+drf-yasg = "^1.21.7"
+python-dotenv = "^1.0.0"
+psycopg2 = "^2.9.8"
+dj-database-url = "^2.1.0"
+
+[tool.poetry.group.dev.dependencies]
+blue = "^0.9.1"
+isort = "^5.12.0"
+flake8-django = "^1.4"
+
+[tool.isort]
+profile = "black"
+line_length = 79
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
