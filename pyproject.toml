@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "school-manager"
 version = "0.1.0"
-description = "A school manager system to manage courses, students and its registrations"
+description = "A school manager system to manage courses, students and its enrollments"
 license = "GPL-3.0-only"
 authors = ["Marcos Raulino <marcosfsraulino@gmail.com>"]
 readme = "README.md"
