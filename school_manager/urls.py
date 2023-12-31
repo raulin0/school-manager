@@ -19,12 +19,12 @@ from django.urls import include, path
 from rest_framework import routers
 
 from api.swagger import urlpatterns as swagger_urls
-from api.views import CourseViewSet, RegistrationViewSet, StudentViewSet
+from api.views import CourseViewSet, EnrollmentViewSet, StudentViewSet
 
 router = routers.DefaultRouter()
 router.register('students', StudentViewSet)
 router.register('courses', CourseViewSet)
-router.register('registrations', RegistrationViewSet)
+router.register('enrollments', EnrollmentViewSet)
 
 
 urlpatterns = [
