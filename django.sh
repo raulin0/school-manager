@@ -17,6 +17,8 @@ else
     echo "Superuser already exists. Skipping creation."
 fi
 
+python manage.py collectstatic --noinput
+
 # Check the environment variable DJANGO_ENV
 if [ "$DJANGO_ENV" = "production" ]; then
     # Run Gunicorn in production
