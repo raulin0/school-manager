@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "school-manager"
 version = "0.1.0"
-description = "A school manager system to manage courses, students and its enrollments"
+description = "A school manager api to manage courses, students and its enrollments"
 license = "GPL-3.0-only"
 authors = ["Marcos Raulino <marcosfsraulino@gmail.com>"]
 readme = "README.md"
@@ -24,6 +24,7 @@ drf-yasg = "^1.21.7"
 python-dotenv = "^1.0.0"
 psycopg2 = "^2.9.8"
 dj-database-url = "^2.1.0"
+whitenoise = "^6.6.0"
 
 [tool.poetry.group.dev.dependencies]
 blue = "^0.9.1"
