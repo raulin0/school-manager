@@ -36,7 +36,7 @@ DEBUG = str(os.getenv('DJANGO_ENV')) == 'development'
 if DEBUG:
     ALLOWED_HOSTS = []
 else:
-    ALLOWED_HOSTS = ['*']
+    ALLOWED_HOSTS = ['127.0.0.1', '.onrender.com']
 
 
 # Application definition
