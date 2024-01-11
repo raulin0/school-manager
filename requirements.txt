@@ -7,7 +7,7 @@ charset-normalizer==3.3.2
 click==8.1.7
 colorama==0.4.6
 dj-database-url==2.1.0
-Django==4.2.8
+Django==4.2.9
 django-filter==23.5
 djangorestframework==3.14.0
 drf-yasg==1.21.7
@@ -18,7 +18,7 @@ idna==3.6
 inflection==0.5.1
 isort==5.13.2
 lazy-object-proxy==1.10.0
-Markdown==3.5.1
+Markdown==3.5.2
 mccabe==0.6.1
 mypy-extensions==1.0.0
 packaging==23.2
