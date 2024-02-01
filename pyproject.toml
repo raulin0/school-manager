@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "school-manager"
-version = "0.1.0"
+version = "0.1.2"
 description = "A school manager api to manage courses, students and its enrollments"
 license = "GPL-3.0-only"
 authors = ["Marcos Raulino <marcosfsraulino@gmail.com>"]
