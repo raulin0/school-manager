@@ -267,4 +267,67 @@ Here are some examples of using the API:
 
 ## Contributing
 
-Contributions to this project are welcome! If you find any issues or have suggestions for improvements, please create a GitHub issue or submit a pull request.
+### Tool
+
+This project uses `Poetry` for environment management and library installation, so make sure you have Poetry installed for this contribution:
+
+```sh
+pipx install poetry
+```
+
+### Contributing Process
+
+1. Fork the repository on GitHub.
+
+2. Clone your forked repository to your local machine.
+
+    ```
+    git clone https://github.com/<your-user>/school-manager.git
+    ```
+
+3. Install dependencies.
+
+    ```
+    poetry install
+    ```
+
+4. Use Git Flow as your workflow to help organize the versioning of your code.
+
+    Git Flow works with two main branches, Develop and Master, which last forever; and three supporting branches, Feature, Release and Hotfix, which are temporary and last until you merge with the main branches.
+    So instead of a single Master branch, this workflow uses two main branches to record the project's history. The Master branch stores the official release history, and the Develop branch serves as a merge branch for features.
+    Ideally, all commits in the Master branch are marked with a version number.
+    - **Master/Main Branch**: where we have all the production code. All new features that are being developed, at some point, will be merged or associated with the Master. The ways to interact with this branch are through a Hotfix or a new Release.
+    - **Develop Branch**: where the code for the next deployment is located. It serves as a timeline with the latest developments, this means that it has features which have not yet been published and which will later be associated with the Master branch.
+    - **Feature Branch**: used for the development of specific features. It is recommended that these branches follow a naming convention, the most used convention is to start the branch name with feature, for example, "feature/feature-name". It is important to know that these feature branches are always created from the Develop branch. Therefore, when they are finished, they are removed after performing the merge with the Develop branch. If we have ten features to develop, we create ten independent branches. It is important to note that feature branches cannot have interaction with the master branch, only with the develop branch.
+    - **Hotfix Branch**: created from the master to make immediate fixes found in the production system. When completed, it is deleted after merge with the master and develop branches. We have a hotfix branch for every hotfix we need to implement! The big difference between Feature Branches and Hotfix Branches is that Hotfixes are created from the Master Branch and when we finish them, they are merged into both the Master Branch and the Develop Branch. This is because the bug is in both environments. Also, when we close a Branch Hotfix, we have to create a tag with the new project version. This is because every change we make in the Branch Master needs a tag that represents it.
+    - **Release Branch**: serves as a bridge for merge from Develop to Master. It works as a testing environment and is removed after the merge tests with the Master. If a bug is found and changes are made, it must also be synchronized with the Develop Release. Finally, when we close a Branch Release, we have to create a tag with the new release version of the software, so that we can have a complete history of the development.
+
+5. Make the necessary changes to the codebase.
+
+6. In case of changes to the project dependencies, generate a new requirements.txt file that will be used in docker.
+
+    ```sh
+    pip freeze > requirements.txt
+    ```
+
+7. Commit your changes with a descriptive commit message using the conventional commit format.
+
+	```sh
+	<type>[optional scope]: <description>
+	[optional body]
+	[optional footer]
+	```
+
+8. Push your branch to your forked repository on GitHub. For an example of a feature:
+
+	```bash
+	git push origin <feature/feature-name>
+	```
+
+9. Open a pull request from your branch to the main repository.
+
+10. Wait for the maintainers to review your changes and address any feedback if necessary.
+
+11. Once your changes are approved, they will be merged into the main repository.
+
+If you have any questions or need assistance during the contribution process, feel free to open an [issue on the project's GitHub repository](https://github.com/Raulin0/school-manager/issues) and ask for help.
